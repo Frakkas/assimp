@@ -196,7 +196,7 @@ zlib_filefunc_def IOSystem2Unzip::get(IOSystem *pIOHandler) {
     zlib_filefunc_def mapping;
 
     mapping.zopen_file = (open_file_func)open;
-#ifndef ZOPENDISK64
+#ifdef ZOPENDISK64
     mapping.zopendisk_file = (opendisk_file_func)opendisk;
 #endif
     mapping.zread_file = (read_file_func)read;
