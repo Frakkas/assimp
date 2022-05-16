@@ -157,7 +157,7 @@ IF (WIN32)
     if (${USE_STATIC_CRT})
       add_compile_options(
           $<$<CONFIG:>:/MT>
-          $<$<CONFIG:Debug>:/MT>
+          $<$<CONFIG:Debug>:/MTd>
           $<$<CONFIG:Release>:/MT>
       )
     endif()
